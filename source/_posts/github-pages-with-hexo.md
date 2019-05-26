@@ -5,8 +5,8 @@ tags:
 ---
 ## 创建 github 个人仓库
 
-在GitHub.com中看到一个New repository，新建仓库创建一个和你用户名相同的仓库，后面加.github.io，
-只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。
+在 GitHub.com 中看到一个 New repository ，新建仓库创建一个和你用户名相同的仓库，后面加`.github.io`，
+只有这样，将来要部署到 GitHub page 的时候，才会被识别，也就是 xxxx.github.io，其中 xxx 就是你注册 GitHub 的用户名。
 
 例如我这里是: `anntiz.github.io`
 
@@ -17,11 +17,11 @@ tags:
 
 ## 克隆分支
 
-然后在本地的任意目录下，打开git bash，执行以下命令克隆仓库：
+然后在本地的任意目录下，打开`git bash`，执行以下命令克隆仓库：
 ```bash
 git clone git@github.com:anntiz/anntiz.github.io.git
 ```
-接下来在克隆到本地的 `anntiz.github.io` 中，把所有文件都删掉移动到其他地方备份。
+接下来在克隆到本地的 `anntiz.github.io` 中，把所有文件都移动到其他地方备份(执行`hexo init`命令之后再移回来)。
 
 在本地的 `anntiz.github.io` 文件夹中通过 `Git bash` 执行以下命令（此时当前分支应显示为`hexo`）：
 
@@ -46,6 +46,6 @@ deploy:
 ## 关于日常的改动流程
 
 在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理。
-1. 依次执行git add .、git commit -m "..."、git push origin hexo (git push)指令将改动推送到GitHub（此时当前分支应为hexo）；
+1. 依次执行git add .、git commit -m "..."、git push origin hexo (git push)指令将改动推送到 GitHub（此时当前分支应为hexo）；
 2. 然后才执行hexo g、hexo d 发布网站到`master`分支上。
 
