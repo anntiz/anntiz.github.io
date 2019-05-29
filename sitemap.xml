@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://anntiz.github.io/about/index.html</loc>
+    
+    <lastmod>2019-05-29T15:00:34.631Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://anntiz.github.io/2019/05/26/github-pages-with-hexo/</loc>
     
     <lastmod>2019-05-29T14:18:50.205Z</lastmod>
@@ -16,14 +23,14 @@
   </url>
   
   <url>
-    <loc>https://anntiz.github.io/repository/index.html</loc>
+    <loc>https://anntiz.github.io/tags/index.html</loc>
     
     <lastmod>2019-05-26T07:03:36.189Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://anntiz.github.io/tags/index.html</loc>
+    <loc>https://anntiz.github.io/repository/index.html</loc>
     
     <lastmod>2019-05-26T07:03:36.189Z</lastmod>
     
@@ -47,13 +54,6 @@
     <loc>https://anntiz.github.io/categories/index.html</loc>
     
     <lastmod>2019-05-26T07:03:36.187Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://anntiz.github.io/about/index.html</loc>
-    
-    <lastmod>2019-05-26T07:03:36.186Z</lastmod>
     
   </url>
   
