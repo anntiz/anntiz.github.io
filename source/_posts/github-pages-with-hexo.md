@@ -49,3 +49,18 @@ deploy:
 1. 依次执行git add .、git commit -m "..."、git push origin hexo (git push)指令将改动推送到 GitHub（此时当前分支应为hexo）；
 2. 然后才执行hexo g、hexo d 发布网站到`master`分支上。
 
+## 其他终端使用流程
+
+当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：
+
+1. 克隆仓库（默认分支为hexo）：
+```bash
+git clone git@github.com:anntiz/anntiz.github.io.git
+```
+2. 在本地新拷贝的 `anntiz.github.io` 文件夹下通过`Git bash`依次执行下列指令：
+```bash
+npm install hexo
+npm install
+npm install hexo-deployer-git
+```
+ > （记得，不需要`hexo init`这条指令）
