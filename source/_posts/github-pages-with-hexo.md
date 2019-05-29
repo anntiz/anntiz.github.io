@@ -1,8 +1,12 @@
 ---
 title: github 上适应多终端工作的 Hexo 博客
 date: 2019-05-26 14:29:18
-categories: GitHub Pages
-tags: [github, hexo, pager]
+categories: 
+  - GitHub Pages
+tags:
+  - github
+  - hexo
+  - pager
 ---
 ## 创建 github 个人仓库
 
