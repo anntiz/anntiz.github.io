@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://anntiz.github.io/2019/05/26/use-theme-with-pure/</loc>
+    
+    <lastmod>2019-05-30T05:04:44.047Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://anntiz.github.io/about/index.html</loc>
     
     <lastmod>2019-05-29T15:00:34.631Z</lastmod>
@@ -16,21 +23,14 @@
   </url>
   
   <url>
-    <loc>https://anntiz.github.io/2019/05/26/use-theme-with-pure/</loc>
-    
-    <lastmod>2019-05-29T14:18:49.828Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://anntiz.github.io/repository/index.html</loc>
+    <loc>https://anntiz.github.io/tags/index.html</loc>
     
     <lastmod>2019-05-26T07:03:36.189Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://anntiz.github.io/tags/index.html</loc>
+    <loc>https://anntiz.github.io/repository/index.html</loc>
     
     <lastmod>2019-05-26T07:03:36.189Z</lastmod>
     
@@ -44,14 +44,14 @@
   </url>
   
   <url>
-    <loc>https://anntiz.github.io/books/index.html</loc>
+    <loc>https://anntiz.github.io/categories/index.html</loc>
     
     <lastmod>2019-05-26T07:03:36.187Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://anntiz.github.io/categories/index.html</loc>
+    <loc>https://anntiz.github.io/books/index.html</loc>
     
     <lastmod>2019-05-26T07:03:36.187Z</lastmod>
     
