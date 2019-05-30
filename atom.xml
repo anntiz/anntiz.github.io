@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://anntiz.github.io/"/>
-  <updated>2019-05-30T06:16:12.805Z</updated>
+  <updated>2019-05-30T12:42:47.565Z</updated>
   <id>https://anntiz.github.io/</id>
   
   <author>
@@ -17,19 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Use-Commit-With-Livere</title>
+    <title>使用 Gitalk 的评论功能</title>
     <link href="https://anntiz.github.io/2019/05/30/use-commit-with-livere/"/>
     <id>https://anntiz.github.io/2019/05/30/use-commit-with-livere/</id>
     <published>2019-05-30T06:14:51.000Z</published>
-    <updated>2019-05-30T06:16:12.805Z</updated>
+    <updated>2019-05-30T12:42:47.565Z</updated>
     
-    <content type="html"><![CDATA[<h2><span id="添加评论功能">添加评论功能</span></h2><p>不知道是否成功。</p>]]></content>
+    <content type="html"><![CDATA[<h2><span id="添加评论功能">添加评论功能</span></h2><p>不知道是否成功。<br>有时候以为容易的事情，却总是失败。<br>有时候以为很难办的，却意外成功了。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2&gt;&lt;span id=&quot;添加评论功能&quot;&gt;添加评论功能&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;不知道是否成功。&lt;/p&gt;
+        &lt;h2&gt;&lt;span id=&quot;添加评论功能&quot;&gt;添加评论功能&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;不知道是否成功。&lt;br&gt;有时候以为容易的事情，却总是失败。&lt;br&gt;有时候以为很难办的，却意外成功了。&lt;/p&gt;
 
       
     
@@ -40,7 +40,7 @@
     
       <category term="hexo" scheme="https://anntiz.github.io/tags/hexo/"/>
     
-      <category term="livere" scheme="https://anntiz.github.io/tags/livere/"/>
+      <category term="gitalk" scheme="https://anntiz.github.io/tags/gitalk/"/>
     
   </entry>
   
