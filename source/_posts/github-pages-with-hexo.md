@@ -8,6 +8,8 @@ tags:
   - hexo
   - pager
 ---
+## 下载安装Git
+在 [git-scm]( https://git-scm.com/download) 的官方网站下载最新版本的 Git，安装、并配置好和 `Github` 的连接。
 ## 创建 github 个人仓库
 
 在 GitHub.com 中看到一个 New repository ，新建仓库创建一个和你用户名相同的仓库，后面加`.github.io`，
