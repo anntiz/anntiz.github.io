@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aef1735-1065-4b95-b5f5-d238353a7686" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/source/_posts/github-pages-with-hexo.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/github-pages-with-hexo.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/pure/layout/_partial/post/livere.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/pure/layout/_partial/article.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/layout/_partial/article.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/pure/source/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/source/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/source/images/avatar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/source/images/avatar.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+            <state relative-caret-position="414">
+              <caret line="51" column="10" lean-forward="true" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -51,19 +54,62 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/_posts/github-pages-with-hexo.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="253">
-                <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
+              <first_editor relative-caret-position="184">
+                <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/pure/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="111" column="40" lean-forward="true" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/pure/layout/_partial/post/livere.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/pure/layout/_partial/article.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/pure/source/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="411">
+              <caret line="9213" column="1" selection-start-line="9213" selection-start-column="1" selection-end-line="9213" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -72,7 +118,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/themes/pure" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -80,15 +126,18 @@
         <option value="$PROJECT_DIR$/scaffolds/post.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/source/about/index.md" />
-        <option value="$PROJECT_DIR$/themes/pure/_config.yml" />
         <option value="$PROJECT_DIR$/source/_posts/use-theme-with-pure.md" />
         <option value="$PROJECT_DIR$/source/_posts/github-pages-with-hexo.md" />
+        <option value="$PROJECT_DIR$/themes/pure/_config.yml" />
+        <option value="$PROJECT_DIR$/themes/pure/layout/_partial/post/livere.ejs.js" />
+        <option value="$PROJECT_DIR$/themes/pure/layout/_partial/article.ejs" />
+        <option value="$PROJECT_DIR$/themes/pure/source/css/style.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="460" />
-    <option name="y" value="75" />
+    <option name="x" value="918" />
+    <option name="y" value="42" />
     <option name="width" value="1262" />
     <option name="height" value="939" />
   </component>
@@ -108,13 +157,28 @@
             <path>
               <item name="anntiz.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="anntiz.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="anntiz.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="anntiz.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="pure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="anntiz.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="anntiz.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="pure" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="anntiz.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="anntiz.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="pure" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -158,15 +222,15 @@
       <workItem from="1558872671585" duration="2343000" />
       <workItem from="1558963976759" duration="338000" />
       <workItem from="1559138208299" duration="5399000" />
-      <workItem from="1559192122842" duration="1600000" />
+      <workItem from="1559192122842" duration="4164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13869000" />
+    <option name="totallyTimeSpent" value="16433000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="460" y="75" width="1262" height="939" extended-state="0" />
+    <frame x="918" y="42" width="1262" height="939" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20179738" />
@@ -182,8 +246,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.501634" side_tool="true" visible="true" weight="0.33844188" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.498366" visible="true" weight="0.33844188" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.501634" side_tool="true" visible="true" weight="0.33716476" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.498366" visible="true" weight="0.33716476" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -241,20 +305,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/pure/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4255">
-          <caret line="188" column="16" lean-forward="true" selection-start-line="188" selection-start-column="10" selection-end-line="188" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/hello-world.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -278,10 +328,45 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/github-pages-with-hexo.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="253">
-            <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
+          <first_editor relative-caret-position="184">
+            <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/pure/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="111" column="40" lean-forward="true" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/pure/layout/_partial/post/livere.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="51" column="10" lean-forward="true" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/pure/layout/_partial/article.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/pure/source/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="9213" column="1" selection-start-line="9213" selection-start-column="1" selection-end-line="9213" selection-end-column="1" />
         </state>
       </provider>
     </entry>
