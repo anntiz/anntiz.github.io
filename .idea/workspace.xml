@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7aef1735-1065-4b95-b5f5-d238353a7686" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scaffolds/post.md" beforeDir="false" afterPath="$PROJECT_DIR$/scaffolds/post.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/github-pages-with-hexo.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/github-pages-with-hexo.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_posts/use-theme-with-pure.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/use-theme-with-pure.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/about/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/about/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/source/images/avatar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/source/images/avatar.jpg" afterDir="false" />
@@ -24,22 +18,34 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+            <state relative-caret-position="1012">
+              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/hello-world.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="161">
+                <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/about/index.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/use-theme-with-pure.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="391">
-                <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+              <first_editor relative-caret-position="115">
+                <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
@@ -63,15 +69,15 @@
         <option value="$PROJECT_DIR$/scaffolds/post.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/source/_posts/github-pages-with-hexo.md" />
-        <option value="$PROJECT_DIR$/source/_posts/use-theme-with-pure.md" />
-        <option value="$PROJECT_DIR$/themes/pure/_config.yml" />
         <option value="$PROJECT_DIR$/source/about/index.md" />
+        <option value="$PROJECT_DIR$/themes/pure/_config.yml" />
+        <option value="$PROJECT_DIR$/source/_posts/use-theme-with-pure.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="677" />
-    <option name="y" value="127" />
+    <option name="x" value="460" />
+    <option name="y" value="75" />
     <option name="width" value="1262" />
     <option name="height" value="939" />
   </component>
@@ -81,7 +87,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -98,17 +103,13 @@
               <item name="anntiz.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="anntiz.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="about" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="anntiz.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="anntiz.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,18 +146,18 @@
       <workItem from="1558851175551" duration="4189000" />
       <workItem from="1558872671585" duration="2343000" />
       <workItem from="1558963976759" duration="338000" />
-      <workItem from="1559138208299" duration="3823000" />
+      <workItem from="1559138208299" duration="5399000" />
+      <workItem from="1559192122842" duration="925000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10693000" />
+    <option name="totallyTimeSpent" value="13194000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="460" y="75" width="1262" height="939" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13013698" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20179738" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -169,8 +170,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50036526" side_tool="true" weight="0.3290653" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49963477" visible="true" weight="0.28619152" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.501634" side_tool="true" visible="true" weight="0.33844188" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.498366" visible="true" weight="0.33844188" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -212,16 +213,6 @@
     <entry file="file://$PROJECT_DIR$/public/images/avatar.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/use-theme-with-pure.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="184">
-            <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/github-pages-with-hexo.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -235,28 +226,48 @@
     <entry file="file://$PROJECT_DIR$/public/favicon.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/pure/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2498">
-          <caret line="175" column="21" lean-forward="true" selection-start-line="175" selection-start-column="21" selection-end-line="175" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/pure/source/favicon.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/about/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="391">
-            <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <first_editor relative-caret-position="299">
+            <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/pure/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4255">
+          <caret line="188" column="16" lean-forward="true" selection-start-line="188" selection-start-column="10" selection-end-line="188" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/hello-world.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="161">
+            <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/use-theme-with-pure.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="115">
+            <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>

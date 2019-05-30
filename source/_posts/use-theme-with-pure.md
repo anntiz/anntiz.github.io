@@ -11,3 +11,6 @@ tags:
 
 # 使用主题 pure
 {% asset_img pure.png This is an example image %}
+
+# 主题配置
+怎么才可以配置好一个漂亮的主题呢？
