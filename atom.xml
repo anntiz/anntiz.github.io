@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://anntiz.github.io/"/>
-  <updated>2019-05-30T05:04:44.047Z</updated>
+  <updated>2019-05-30T06:16:12.805Z</updated>
   <id>https://anntiz.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Use-Commit-With-Livere</title>
+    <link href="https://anntiz.github.io/2019/05/30/use-commit-with-livere/"/>
+    <id>https://anntiz.github.io/2019/05/30/use-commit-with-livere/</id>
+    <published>2019-05-30T06:14:51.000Z</published>
+    <updated>2019-05-30T06:16:12.805Z</updated>
+    
+    <content type="html"><![CDATA[<h2><span id="添加评论功能">添加评论功能</span></h2><p>不知道是否成功。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2&gt;&lt;span id=&quot;添加评论功能&quot;&gt;添加评论功能&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;不知道是否成功。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="GitHub Pages" scheme="https://anntiz.github.io/categories/GitHub-Pages/"/>
+    
+    
+      <category term="hexo" scheme="https://anntiz.github.io/tags/hexo/"/>
+    
+      <category term="livere" scheme="https://anntiz.github.io/tags/livere/"/>
+    
+  </entry>
   
   <entry>
     <title>在 Hexo 中使用主题 Pure</title>
