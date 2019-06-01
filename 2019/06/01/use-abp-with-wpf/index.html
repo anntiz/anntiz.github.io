@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>在ABP项目中使用WPF | Anntiz&#39;s blog</title>
+  <meta name="description" content="创建 ABP 项目在 ASP.NET Boilerplate 网站上创建一个 ASP.NET MVC 5.x的项目，如下图所示：  将下载后的解决方案解压缩后使用 Visual Studio 2019 打开，并 还原NuGet包。 在解决方案中添加WPF项目在 Acme.ContosoUniversity.Web 项目上鼠标右键 -&amp;gt; 属性 ，查看项目的 目标框架 的版本  在 Visual">
+<meta name="keywords" content="ABP,WPF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在ABP项目中使用WPF">
+<meta property="og:url" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/index.html">
+<meta property="og:site_name" content="Anntiz&#39;s Blog">
+<meta property="og:description" content="创建 ABP 项目在 ASP.NET Boilerplate 网站上创建一个 ASP.NET MVC 5.x的项目，如下图所示：  将下载后的解决方案解压缩后使用 Visual Studio 2019 打开，并 还原NuGet包。 在解决方案中添加WPF项目在 Acme.ContosoUniversity.Web 项目上鼠标右键 -&amp;gt; 属性 ，查看项目的 目标框架 的版本  在 Visual">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/createsolution.PNG">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/targetframeworks.PNG">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/newproject.png">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/addnewproject.png">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/configurenewproject.PNG">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/add_abp.PNG">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/add_abp.castle.log4net.PNG">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/add_entityframework.PNG">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/add_microsoft.bcl.PNG">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/add_microsoft.bcl.async.PNG">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/add_reference.png">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/reference_manager.png">
+<meta property="og:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/log4net.config.png">
+<meta property="og:updated_time" content="2019-06-01T09:09:36.052Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在ABP项目中使用WPF">
+<meta name="twitter:description" content="创建 ABP 项目在 ASP.NET Boilerplate 网站上创建一个 ASP.NET MVC 5.x的项目，如下图所示：  将下载后的解决方案解压缩后使用 Visual Studio 2019 打开，并 还原NuGet包。 在解决方案中添加WPF项目在 Acme.ContosoUniversity.Web 项目上鼠标右键 -&amp;gt; 属性 ，查看项目的 目标框架 的版本  在 Visual">
+<meta name="twitter:image" content="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/createsolution.PNG">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Anntiz&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+  
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
+  
+</head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/anntiz" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">Marcin</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">.NET &amp; Web Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Nanning, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索">
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech>
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/anntiz" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle="tooltip" data-placement="top"><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ABP/">ABP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub-Pages/">GitHub Pages</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ABP/">ABP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WPF/">WPF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitalk/">gitalk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pager/">pager</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pure/">pure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/theme/">theme</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/ABP/" style="font-size: 13px;">ABP</a> <a href="/tags/WPF/" style="font-size: 13px;">WPF</a> <a href="/tags/gitalk/" style="font-size: 13px;">gitalk</a> <a href="/tags/github/" style="font-size: 13px;">github</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/pager/" style="font-size: 13px;">pager</a> <a href="/tags/pure/" style="font-size: 13px;">pure</a> <a href="/tags/theme/" style="font-size: 13px;">theme</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/ABP/">ABP</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/06/01/use-abp-with-wpf/" class="title">在ABP项目中使用WPF</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-06-01T08:11:57.000Z" itemprop="datePublished">2019-06-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/GitHub-Pages/">GitHub Pages</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/05/30/use-commit-with-livere/" class="title">使用 Gitalk 的评论功能</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-05-30T06:14:51.000Z" itemprop="datePublished">2019-05-30</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/GitHub-Pages/">GitHub Pages</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/05/26/use-theme-with-pure/" class="title">在 Hexo 中使用主题 Pure</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-05-26T12:16:22.000Z" itemprop="datePublished">2019-05-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/GitHub-Pages/">GitHub Pages</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/05/26/github-pages-with-hexo/" class="title">Github 上适应多终端工作的 Hexo 博客</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-05-26T06:29:18.000Z" itemprop="datePublished">2019-05-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/05/26/hello-world/" class="title">Hello World</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-05-26T06:06:54.956Z" itemprop="datePublished">2019-05-26</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-use-abp-with-wpf" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      在ABP项目中使用WPF
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2019/06/01/use-abp-with-wpf/" class="article-date">
+	  <time datetime="2019-06-01T08:11:57.000Z" itemprop="datePublished">2019-06-01</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/ABP/">ABP</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/ABP/">ABP</a>, <a class="article-tag-link" href="/tags/WPF/">WPF</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/06/01/use-abp-with-wpf/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2><span id="创建-abp-项目">创建 ABP 项目</span></h2><p>在 <a href="https://aspnetboilerplate.com/Templates" target="_blank" rel="noopener">ASP.NET Boilerplate</a> 网站上创建一个 <code>ASP.NET MVC 5.x</code>的项目，如下图所示：</p>
+<img src="/2019/06/01/use-abp-with-wpf/createsolution.PNG" title="Create ASP.NET MVC 5.X Solution">
+<p>将下载后的解决方案解压缩后使用 <code>Visual Studio 2019</code> 打开，并 <code>还原NuGet包</code>。</p>
+<h2><span id="在解决方案中添加wpf项目">在解决方案中添加WPF项目</span></h2><p>在 <code>Acme.ContosoUniversity.Web</code> 项目上<code>鼠标右键</code> -&gt; <code>属性</code> ，查看项目的 <code>目标框架</code> 的版本</p>
+<img src="/2019/06/01/use-abp-with-wpf/targetframeworks.PNG" title="Add New Project">
+<p>在 <code>Visual Studio 2019</code> 的解决方案资源管理器中选中解决方案，<code>鼠标右键</code> -&gt; <code>添加</code> -&gt; <code>新建项目</code>：</p>
+<img src="/2019/06/01/use-abp-with-wpf/newproject.png" title="Add New Project">
+<p>在 <code>添加新项目</code> 窗口中选择 <code>WPF应用(.NET Framework)</code> 模板，然后 <code>下一步</code>：</p>
+<img src="/2019/06/01/use-abp-with-wpf/addnewproject.png" title="Add New Project">
+<p>在 <code>配置新项目</code> 窗口中输入 WPF 项目的名称为：<code>Acme.ContosoUniversity.WPF</code>，框架为：<code>.NET Framework 4.6.1</code> (与前面查看的目标框架版本相同)</p>
+<img src="/2019/06/01/use-abp-with-wpf/configurenewproject.PNG" title="Add New Project">
+<h2><span id="为wpf项目添加nuget包">为WPF项目添加NuGet包</span></h2><p>在 <code>Acme.ContosoUniversity.WPF</code> 项目上 <code>鼠标右键</code> -&gt; <code>管理NuGet程序包</code>， 在打开的 <code>NuGet包管理器</code> 中搜索并添加以下包：</p>
+<p>1、Abp</p>
+<img src="/2019/06/01/use-abp-with-wpf/add_abp.PNG" title="Add ABP">
+<p>2、Abp.Castle.Log4Net</p>
+<img src="/2019/06/01/use-abp-with-wpf/add_abp.castle.log4net.PNG" title="Add Abp.Castle.Log4Net">
+<p>3、EntityFramework 6.2.0</p>
+<img src="/2019/06/01/use-abp-with-wpf/add_entityframework.PNG" title="Add EntityFramework 6.2.0">
+<p>4、Microsoft.Bcl</p>
+<img src="/2019/06/01/use-abp-with-wpf/add_microsoft.bcl.PNG" title="Add Microsoft.Bcl">
+<p>5、Microsoft.Bcl.Async</p>
+<img src="/2019/06/01/use-abp-with-wpf/add_microsoft.bcl.async.PNG" title="Add Microsoft.Bcl.Async">
+<h2><span id="为wpf项目添加引用">为WPF项目添加引用</span></h2><p>在 <code>Acme.ContosoUniversity.WPF</code> 项目的 <code>引用</code> 上 <code>鼠标右键</code> -&gt; <code>添加引用</code></p>
+<img src="/2019/06/01/use-abp-with-wpf/add_reference.png" title="Add Reference">
+<p>在 <code>引用管理器</code> 的左窗格选择 <code>项目</code>, 在右窗格中选中 <code>Application</code>、 <code>Core</code>、 <code>EntityFramework</code> 三个项目，然后 <code>确定</code></p>
+<img src="/2019/06/01/use-abp-with-wpf/reference_manager.png" title="Reference Manager">
+<h2><span id="添加-log4netconfig-配置文件">添加 log4net.config 配置文件</span></h2><p>在 <code>Acme.ContosoUniversity.WPF</code> 项目上 <code>鼠标右键</code> -&gt; <code>添加</code> -&gt; <code>新建项</code>，模板选择 <code>应用程序配置文件</code>，输入文件名为：<code>log4net.config</code></p>
+<img src="/2019/06/01/use-abp-with-wpf/log4net.config.png" title="Add log4net.config">
+<p>输入 <code>log4net.config</code> 文件的内容如以下代码所示：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">log4net</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"RollingFileAppender"</span> <span class="attr">type</span>=<span class="string">"log4net.Appender.RollingFileAppender"</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">file</span> <span class="attr">value</span>=<span class="string">"Logs/Logs.txt"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appendToFile</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">rollingStyle</span> <span class="attr">value</span>=<span class="string">"Size"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">maxSizeRollBackups</span> <span class="attr">value</span>=<span class="string">"10"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">maximumFileSize</span> <span class="attr">value</span>=<span class="string">"10000KB"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">staticLogFileName</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">layout</span> <span class="attr">type</span>=<span class="string">"log4net.Layout.PatternLayout"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">conversionPattern</span> <span class="attr">value</span>=<span class="string">"%-5level %date [%-5.5thread] %-40.40logger - %message%newline"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">root</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"RollingFileAppender"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">level</span> <span class="attr">value</span>=<span class="string">"DEBUG"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">log4net</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2><span id="添加wpf项目模板类">添加WPF项目模板类</span></h2><p>在 <code>Acme.ContosoUniversity.WPF</code> 项目上 <code>鼠标右键</code> -&gt; <code>添加</code> -&gt; <code>类</code>，输入类文件名为：<code>ContosoUniversityWPFModule.cs</code>，输入如以下所示代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">using Abp.Modules;</span><br><span class="line">using System.Reflection;</span><br><span class="line"></span><br><span class="line">namespace Acme.ContosoUniversity.WPF</span><br><span class="line">&#123;</span><br><span class="line">    [DependsOn(typeof(ContosoUniversityDataModule), typeof(ContosoUniversityApplicationModule))]</span><br><span class="line">    public class ContosoUniversityWPFModule : AbpModule</span><br><span class="line">    &#123;</span><br><span class="line">        public override void Initialize()</span><br><span class="line">        &#123;</span><br><span class="line">            IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());</span><br><span class="line">            // base.Initialize();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2><span id="编辑-appxamlcs-文件">编辑 App.xaml.cs 文件</span></h2><p>打开文件 <code>App.xaml.cs</code>，修改为如以下所示代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">using Abp;</span><br><span class="line">using Abp.Castle.Logging.Log4Net;</span><br><span class="line">using Castle.Facilities.Logging;</span><br><span class="line">using System.Windows;</span><br><span class="line"></span><br><span class="line">namespace Acme.ContosoUniversity.WPF</span><br><span class="line">&#123;</span><br><span class="line">    /// &lt;summary&gt;</span><br><span class="line">    /// App.xaml 的交互逻辑</span><br><span class="line">    /// &lt;/summary&gt;</span><br><span class="line">    public partial class App : Application</span><br><span class="line">    &#123;</span><br><span class="line">        private readonly AbpBootstrapper _bootstrapper;</span><br><span class="line">        private MainWindow _mainWindow;</span><br><span class="line"></span><br><span class="line">        public App()</span><br><span class="line">        &#123;</span><br><span class="line">            _bootstrapper = AbpBootstrapper.Create&lt;ContosoUniversityWPFModule&gt;();</span><br><span class="line">            _bootstrapper.IocManager.IocContainer.AddFacility&lt;LoggingFacility&gt;(</span><br><span class="line">                f =&gt; f.UseAbpLog4Net().WithConfig(&quot;log4net.config&quot;));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        protected override void OnStartup(StartupEventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            _bootstrapper.Initialize();</span><br><span class="line">            _mainWindow = _bootstrapper.IocManager.Resolve&lt;MainWindow&gt;();</span><br><span class="line">            _mainWindow.Show();</span><br><span class="line">            // base.OnStartup(e);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        protected override void OnExit(ExitEventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            _bootstrapper.IocManager.Release(_mainWindow);</span><br><span class="line">            _bootstrapper.Dispose();</span><br><span class="line">           // base.OnExit(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2><span id="编辑-appxaml-文件">编辑 App.xaml 文件</span></h2><p>打开 <code>App.xaml</code> 文件，其内容为以下所示代码：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Application</span> <span class="attr">x:Class</span>=<span class="string">"Acme.ContosoUniversity.WPF.App"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">xmlns</span>=<span class="string">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">xmlns:x</span>=<span class="string">"http://schemas.microsoft.com/winfx/2006/xaml"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">xmlns:local</span>=<span class="string">"clr-namespace:Acme.ContosoUniversity.WPF"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">StartupUri</span>=<span class="string">"MainWindow.xaml"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Application.Resources</span>&gt;</span></span><br><span class="line">         </span><br><span class="line">    <span class="tag">&lt;/<span class="name">Application.Resources</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Application</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>将第5行的 <code>StartupUri=&quot;MainWindow.xaml&quot;</code> 删除，否则运行程序时会打开两个 MainWindow 窗口。修改后代码如以下所示:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Application</span> <span class="attr">x:Class</span>=<span class="string">"Acme.ContosoUniversity.WPF.App"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">xmlns</span>=<span class="string">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">xmlns:x</span>=<span class="string">"http://schemas.microsoft.com/winfx/2006/xaml"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">xmlns:local</span>=<span class="string">"clr-namespace:Acme.ContosoUniversity.WPF"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Application.Resources</span>&gt;</span></span><br><span class="line">         </span><br><span class="line">    <span class="tag">&lt;/<span class="name">Application.Resources</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Application</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2><span id="修改-mainwindowxamlcs-文件">修改 MainWindow.xaml.cs 文件</span></h2><p>打开 <code>MainWindow.xaml.cs</code> 文件，打到以下行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public partial class MainWindow : Window</span><br></pre></td></tr></table></figure>
+<p>将其修改为如下所示代码，并添加相应的名字空间引用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public partial class MainWindow : Window, ISingletonDependency</span><br></pre></td></tr></table></figure></p>
+<p>修改后的完整代码，如以下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">using Abp.Dependency;</span><br><span class="line">using System.Windows;</span><br><span class="line"></span><br><span class="line">namespace Acme.ContosoUniversity.WPF</span><br><span class="line">&#123;</span><br><span class="line">    /// &lt;summary&gt;</span><br><span class="line">    /// MainWindow.xaml 的交互逻辑</span><br><span class="line">    /// &lt;/summary&gt;</span><br><span class="line">    public partial class MainWindow : Window, ISingletonDependency</span><br><span class="line">    &#123;</span><br><span class="line">        public MainWindow()</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2><span id="运行wpf程序">运行WPF程序</span></h2><p>将 <code>Acme.ContosoUniversity.WPF</code> 设为启动项目，并运行。此时出现 <code>未经处理的异常</code>，显示找不到文件 <code>Debug\log4net.config</code>。</p>
+<p>解决办法：将 <code>log4net.config</code> 复制到 Debug 文件夹后，再次运行即可。</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://anntiz.github.io/2019/06/01/use-abp-with-wpf/" title="在ABP项目中使用WPF" target="_blank" rel="external">https://anntiz.github.io/2019/06/01/use-abp-with-wpf/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/anntiz" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt>
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/anntiz" target="_blank"><span class="text-dark">Marcin</span><small class="ml-1x">.NET &amp; Web Developer</small></a></h3>
+        <div>一个将要转向 Java 才发觉自己热爱 .NET 的 Developer, 觉得 TypeScript 也很不错。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+           
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2019/05/30/use-commit-with-livere/" title="使用 Gitalk 的评论功能"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/anntiz" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle="tooltip" data-placement="top"><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '03979b7db4f2bacf2e1d',
+    clientSecret: '2ccdc9421e48ac411337584330f49819656f4ea2',
+    repo: 'blogcommit',
+    owner: 'anntiz',
+    admin: ['anntiz'],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+  })
+  gitalk.render('comments')
+  </script>
+
+      
+
+
+
+
+
+
+
+</body>
+</html>
