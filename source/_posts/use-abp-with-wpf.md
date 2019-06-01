@@ -96,7 +96,7 @@ date: 2019-06-01 16:11:57
 </log4net>
 ```
 
-## 添加WPF项目模板类
+## 添加WPF项目模块类
 
 在 `Acme.ContosoUniversity.WPF` 项目上 `鼠标右键` -> `添加` -> `类`，输入类文件名为：`ContosoUniversityWPFModule.cs`，输入如以下所示代码：
 ```c#
@@ -194,7 +194,7 @@ namespace Acme.ContosoUniversity.WPF
 
 ## 修改 MainWindow.xaml.cs 文件
 
-打开 `MainWindow.xaml.cs` 文件，打到以下行：
+打开 `MainWindow.xaml.cs` 文件，找到以下行：
 
 ```c#
 public partial class MainWindow : Window
@@ -229,6 +229,8 @@ namespace Acme.ContosoUniversity.WPF
 ## 运行WPF程序
 
 将 `Acme.ContosoUniversity.WPF` 设为启动项目，并运行。此时出现 `未经处理的异常`，显示找不到文件 `Debug\log4net.config`。
+
+{% asset_img log4net.config_error.PNG File Not Found Exception %}
 
 
 解决办法：将 `log4net.config` 复制到 Debug 文件夹后，再次运行即可。
