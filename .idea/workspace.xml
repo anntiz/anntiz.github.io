@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aef1735-1065-4b95-b5f5-d238353a7686" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/use-abp-with-wpf/log4net.config_error.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/git-with-github/git_bash_here.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/git-with-github/id_rsa_pub.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/git-with-github/newkey.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/themes/pure/layout/_partial/post/livere.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/use-abp-with-wpf.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/use-abp-with-wpf.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/about/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/about/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/layout/_partial/article.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/layout/_partial/article.ejs" afterDir="false" />
@@ -22,13 +24,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/use-abp-with-wpf.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/git-with-github.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="275">
-                <caret line="232" column="62" selection-start-line="232" selection-start-column="62" selection-end-line="232" selection-end-column="62" />
+              <first_editor relative-caret-position="485">
+                <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
               </first_editor>
               <second_editor />
             </state>
@@ -36,11 +38,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/use-theme-with-pure.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/use-abp-with-wpf.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="276">
-                <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="49" />
+              <first_editor relative-caret-position="322">
+                <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="66" />
               </first_editor>
               <second_editor />
             </state>
@@ -70,7 +72,6 @@
       <list>
         <option value="$PROJECT_DIR$/scaffolds/post.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
-        <option value="$PROJECT_DIR$/source/about/index.md" />
         <option value="$PROJECT_DIR$/source/_posts/use-theme-with-pure.md" />
         <option value="$PROJECT_DIR$/source/_posts/github-pages-with-hexo.md" />
         <option value="$PROJECT_DIR$/themes/pure/layout/_partial/post/livere.ejs.js" />
@@ -79,12 +80,14 @@
         <option value="$PROJECT_DIR$/themes/pure/_config.yml" />
         <option value="$PROJECT_DIR$/source/_posts/use-commit-with-livere.md" />
         <option value="$PROJECT_DIR$/source/_posts/use-abp-with-wpf.md" />
+        <option value="$PROJECT_DIR$/source/about/index.md" />
+        <option value="$PROJECT_DIR$/source/_posts/git-with-github.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="805" />
-    <option name="y" value="92" />
+    <option name="x" value="381" />
+    <option name="y" value="110" />
     <option name="width" value="1446" />
     <option name="height" value="863" />
   </component>
@@ -94,6 +97,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -112,31 +116,24 @@
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="anntiz.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="anntiz.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-              <item name="use-abp-with-wpf" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/_posts/use-abp-with-wpf" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/_posts/git-with-github" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\blog\anntiz.github.io\source\_posts\git-with-github" />
       <recent name="D:\WebstormProjects\blog\anntiz.github.io\source\_posts\use-abp-with-wpf" />
     </key>
   </component>
@@ -168,18 +165,22 @@
       <workItem from="1559138208299" duration="5399000" />
       <workItem from="1559192122842" duration="7729000" />
       <workItem from="1559218922382" duration="1678000" />
-      <workItem from="1559376604184" duration="4336000" />
+      <workItem from="1559376604184" duration="7117000" />
+      <workItem from="1559470502460" duration="303000" />
+      <workItem from="1559470824314" duration="335000" />
+      <workItem from="1559528355113" duration="1795000" />
+      <workItem from="1559547176757" duration="699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26012000" />
+    <option name="totallyTimeSpent" value="31925000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="805" y="92" width="1446" height="863" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18607955" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14488935" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -192,8 +193,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32956153" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021307" side_tool="true" weight="0.21640736" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4978693" visible="true" weight="0.22772278" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5041254" side_tool="true" weight="0.2260274" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49587458" visible="true" weight="0.18374164" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -224,14 +225,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/404/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/images/avatar.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -240,16 +233,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/pure/source/favicon.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/about/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="299">
-            <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/pure/source/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -262,13 +245,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/pure/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="130" column="48" selection-start-line="130" selection-start-column="48" selection-end-line="130" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -316,6 +292,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/abp-with-wpf.md" />
     <entry file="file://$PROJECT_DIR$/source/_posts/use-theme-with-pure.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -326,11 +303,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/themes/pure/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/about/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="667">
+            <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/404/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="161">
+            <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/use-abp-with-wpf.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="275">
-            <caret line="232" column="62" selection-start-line="232" selection-start-column="62" selection-end-line="232" selection-end-column="62" />
+          <first_editor relative-caret-position="322">
+            <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="66" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/git-with-github.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="485">
+            <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
           </first_editor>
           <second_editor />
         </state>
