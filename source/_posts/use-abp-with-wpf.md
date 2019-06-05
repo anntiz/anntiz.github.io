@@ -1,5 +1,5 @@
 ---
-title: 在ABP项目中使用WPF
+title: 在ABP项目中的WPF（一）：添加 WPF 项目到 ABP 框架
 categories:
   - ABP
 tags:
