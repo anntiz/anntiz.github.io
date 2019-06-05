@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://anntiz.github.io/2019/06/05/abp-wpf-data-sample/</loc>
+    
+    <lastmod>2019-06-05T13:16:42.652Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://anntiz.github.io/2019/06/05/abp-wpf-with-data/</loc>
+    
+    <lastmod>2019-06-05T12:34:41.901Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://anntiz.github.io/about/index.html</loc>
     
     <lastmod>2019-06-03T08:20:01.396Z</lastmod>
@@ -44,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://anntiz.github.io/tags/index.html</loc>
+    <loc>https://anntiz.github.io/repository/index.html</loc>
     
     <lastmod>2019-05-26T07:03:36.189Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://anntiz.github.io/repository/index.html</loc>
+    <loc>https://anntiz.github.io/tags/index.html</loc>
     
     <lastmod>2019-05-26T07:03:36.189Z</lastmod>
     
