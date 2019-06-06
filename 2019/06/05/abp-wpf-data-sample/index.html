@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Anntiz&#39;s Blog">
 <meta property="og:description" content="添加实体在 Acme.ContosoUniversity.Core 项目中添加文件夹 People， 并在该文件夹中添加类：Person， 内容如以下所示： using Abp.Domain.Entities; using System.ComponentModel.DataAnnotations.Schema;  namespace Acme.ContosoUniversity.People {">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-06T03:58:43.876Z">
+<meta property="og:updated_time" content="2019-06-06T04:32:16.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在ABP项目中的WPF（三）：简单的数据操作示例">
 <meta name="twitter:description" content="添加实体在 Acme.ContosoUniversity.Core 项目中添加文件夹 People， 并在该文件夹中添加类：Person， 内容如以下所示： using Abp.Domain.Entities; using System.ComponentModel.DataAnnotations.Schema;  namespace Acme.ContosoUniversity.People {">
@@ -380,7 +380,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/06/05/abp-wpf-data-sample/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 566(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 568(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
@@ -404,18 +404,18 @@ namespace Acme.ContosoUniversity.People
 }
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2><span id="修改-数据上下文">修改 数据上下文</span></h2><p>打开 <code>Acme.ContosoUniversity.EntityFramework</code> 项目下的 <code>EntityFramework/ContosoUniversityDbContext.cs</code> 文件，在数据库上下文中添加 <code>IDbSet&lt;Person&gt;</code> 属性，如以下代码所示：</p>
-<pre class="line-numbers language-C#"><code class="language-C#">namespace Acme.ContosoUniversity.EntityFramework
-{    
-    [DbConfigurationType(typeof(MySqlEFConfiguration))]
-    public class ContosoUniversityDbContext : AbpDbContext
-    {
-        // 添加这一行代码
-        public virtual IDbSet<person> People { get; set; }
+<pre class="line-numbers language-csharp"><code class="language-csharp"><span class="token keyword">namespace</span> Acme<span class="token punctuation">.</span>ContosoUniversity<span class="token punctuation">.</span>EntityFramework
+<span class="token punctuation">{</span>    
+    <span class="token punctuation">[</span><span class="token function">DbConfigurationType</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>MySqlEFConfiguration<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ContosoUniversityDbContext</span> <span class="token punctuation">:</span> AbpDbContext
+    <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 添加这一行代码</span>
+        <span class="token keyword">public</span> <span class="token keyword">virtual</span> IDbSet<span class="token operator">&lt;</span>Person<span class="token operator">></span> People <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
 
-        // 后续原有的代码省略
-     }
- }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></person></code></pre>
+        <span class="token comment" spellcheck="true">// 后续原有的代码省略</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2><span id="添加-application-服务类">添加 Application 服务类</span></h2><p>在 <code>Acme.ContosoUniversity.Application</code> 项目中添加 <code>People</code> 文件夹，在该文件夹中添加类： <code>IPersonAppService.cs</code>， 文件内容如以下所示：</p>
 <pre class="line-numbers language-C#"><code class="language-C#">using Abp.Application.Services;
 using Acme.ContosoUniversity.People.Dto;
