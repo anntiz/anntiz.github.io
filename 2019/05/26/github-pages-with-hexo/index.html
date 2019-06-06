@@ -45,7 +45,8 @@
   
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
   
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
@@ -379,7 +380,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/05/26/github-pages-with-hexo/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 505(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 511(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
@@ -394,11 +395,25 @@
 <p>例如我这里是: <code>anntiz.github.io</code></p>
 <p>点击 create repository。</p>
 <h2><span id="创建分支">创建分支</span></h2><p>在上面创建好的仓库中新建分支 <code>hexo</code>，并设置为默认分支</p>
-<h2><span id="克隆分支">克隆分支</span></h2><p>然后在本地的任意目录下，打开<code>git bash</code>，执行以下命令克隆仓库：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:anntiz/anntiz.github.io.git</span><br></pre></td></tr></table></figure></p>
+<h2><span id="克隆分支">克隆分支</span></h2><p>然后在本地的任意目录下，打开<code>git bash</code>，执行以下命令克隆仓库：</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> clone git@github.com:anntiz/anntiz.github.io.git
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>接下来在克隆到本地的 <code>anntiz.github.io</code> 中，把所有文件都移动到其他地方备份(执行<code>hexo init</code>命令之后再移回来)。</p>
 <p>在本地的 <code>anntiz.github.io</code> 文件夹中通过 <code>Git bash</code> 执行以下命令（此时当前分支应显示为<code>hexo</code>）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm init -f</span><br><span class="line">npm install hexo</span><br><span class="line">hexo init</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<p>修改_config.yml中的deploy参数，分支应为master，例如：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/anntiz/anntiz.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> init -f
+<span class="token function">npm</span> <span class="token function">install</span> hexo
+hexo init
+<span class="token function">npm</span> <span class="token function">install</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>修改_config.yml中的deploy参数，分支应为master，例如：</p>
+<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># Deployment</span>
+<span class="token comment" spellcheck="true">## Docs: https://hexo.io/docs/deployment.html</span>
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/anntiz/anntiz.github.io.git
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2><span id="关于日常的改动流程">关于日常的改动流程</span></h2><p>在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理。</p>
 <ol>
 <li>依次执行git add .、git commit -m “…”、git push origin hexo (git push)指令将改动推送到 GitHub（此时当前分支应为hexo）；</li>
@@ -406,11 +421,13 @@
 </ol>
 <h2><span id="其他终端使用流程">其他终端使用流程</span></h2><p>当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：</p>
 <ol>
-<li><p>克隆仓库（默认分支为hexo）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:anntiz/anntiz.github.io.git</span><br></pre></td></tr></table></figure>
+<li>克隆仓库（默认分支为hexo）：<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> clone git@github.com:anntiz/anntiz.github.io.git
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
-<li><p>在本地新拷贝的 <code>anntiz.github.io</code> 文件夹下通过<code>Git bash</code>依次执行下列指令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<li>在本地新拷贝的 <code>anntiz.github.io</code> 文件夹下通过<code>Git bash</code>依次执行下列指令：<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo
+<span class="token function">npm</span> <span class="token function">install</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>（记得，不需要<code>hexo init</code>这条指令）</p>
 </blockquote>

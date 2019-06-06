@@ -18,18 +18,18 @@
   
   
   <title>在ABP项目中的WPF（三）：简单的数据操作示例 | Anntiz&#39;s blog</title>
-  <meta name="description" content="添加实体在 Acme.ContosoUniversity.Core 项目中添加文件夹 People， 并在该文件夹中添加类：Person， 内容如以下所示：1234567891011using Abp.Domain.Entities;using System.ComponentModel.DataAnnotations.Schema;namespace Acme.ContosoUniversity">
+  <meta name="description" content="添加实体在 Acme.ContosoUniversity.Core 项目中添加文件夹 People， 并在该文件夹中添加类：Person， 内容如以下所示： using Abp.Domain.Entities; using System.ComponentModel.DataAnnotations.Schema;  namespace Acme.ContosoUniversity.People {">
 <meta name="keywords" content="ABP,WPF,MySql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在ABP项目中的WPF（三）：简单的数据操作示例">
 <meta property="og:url" content="https://anntiz.github.io/2019/06/05/abp-wpf-data-sample/index.html">
 <meta property="og:site_name" content="Anntiz&#39;s Blog">
-<meta property="og:description" content="添加实体在 Acme.ContosoUniversity.Core 项目中添加文件夹 People， 并在该文件夹中添加类：Person， 内容如以下所示：1234567891011using Abp.Domain.Entities;using System.ComponentModel.DataAnnotations.Schema;namespace Acme.ContosoUniversity">
+<meta property="og:description" content="添加实体在 Acme.ContosoUniversity.Core 项目中添加文件夹 People， 并在该文件夹中添加类：Person， 内容如以下所示： using Abp.Domain.Entities; using System.ComponentModel.DataAnnotations.Schema;  namespace Acme.ContosoUniversity.People {">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-06-06T03:58:43.876Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在ABP项目中的WPF（三）：简单的数据操作示例">
-<meta name="twitter:description" content="添加实体在 Acme.ContosoUniversity.Core 项目中添加文件夹 People， 并在该文件夹中添加类：Person， 内容如以下所示：1234567891011using Abp.Domain.Entities;using System.ComponentModel.DataAnnotations.Schema;namespace Acme.ContosoUniversity">
+<meta name="twitter:description" content="添加实体在 Acme.ContosoUniversity.Core 项目中添加文件夹 People， 并在该文件夹中添加类：Person， 内容如以下所示： using Abp.Domain.Entities; using System.ComponentModel.DataAnnotations.Schema;  namespace Acme.ContosoUniversity.People {">
   <!-- Canonical links -->
   <link rel="canonical" href="https://anntiz.github.io/2019/06/05/abp-wpf-data-sample/index.html">
   
@@ -45,7 +45,8 @@
   
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
   
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
@@ -379,30 +380,219 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/06/05/abp-wpf-data-sample/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 869(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 566(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2><span id="添加实体">添加实体</span></h2><p>在 <code>Acme.ContosoUniversity.Core</code> 项目中添加文件夹 <code>People</code>， 并在该文件夹中添加类：<code>Person</code>， 内容如以下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">using Abp.Domain.Entities;</span><br><span class="line">using System.ComponentModel.DataAnnotations.Schema;</span><br><span class="line"></span><br><span class="line">namespace Acme.ContosoUniversity.People</span><br><span class="line">&#123;</span><br><span class="line">    [Table(&quot;AppPeople&quot;)]</span><br><span class="line">    public class Person : Entity</span><br><span class="line">    &#123;</span><br><span class="line">        public virtual string Name &#123; get; set; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h2><span id="添加实体">添加实体</span></h2><p>在 <code>Acme.ContosoUniversity.Core</code> 项目中添加文件夹 <code>People</code>， 并在该文件夹中添加类：<code>Person</code>， 内容如以下所示：</p>
+<pre class="line-numbers language-c#"><code class="language-c#">using Abp.Domain.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Acme.ContosoUniversity.People
+{
+    [Table("AppPeople")]
+    public class Person : Entity
+    {
+        public virtual string Name { get; set; }
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2><span id="修改-数据上下文">修改 数据上下文</span></h2><p>打开 <code>Acme.ContosoUniversity.EntityFramework</code> 项目下的 <code>EntityFramework/ContosoUniversityDbContext.cs</code> 文件，在数据库上下文中添加 <code>IDbSet&lt;Person&gt;</code> 属性，如以下代码所示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">namespace Acme.ContosoUniversity.EntityFramework</span><br><span class="line">&#123;    </span><br><span class="line">    [DbConfigurationType(typeof(MySqlEFConfiguration))]</span><br><span class="line">    public class ContosoUniversityDbContext : AbpDbContext</span><br><span class="line">    &#123;</span><br><span class="line">        // 添加这一行代码</span><br><span class="line">        public virtual IDbSet&lt;Person&gt; People &#123; get; set; &#125;</span><br><span class="line">        </span><br><span class="line">        // 后续原有的代码省略</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<h2><span id="添加-application-服务类">添加 Application 服务类</span></h2><p>在 <code>Acme.ContosoUniversity.Application</code> 项目中添加 <code>People</code> 文件夹，在该文件夹中添加类： <code>IPersonAppService.cs</code>， 文件内容如以下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">using Abp.Application.Services;</span><br><span class="line">using Acme.ContosoUniversity.People.Dto;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace Acme.ContosoUniversity.People</span><br><span class="line">&#123;</span><br><span class="line">    public interface IPersonAppService: IApplicationService</span><br><span class="line">    &#123;</span><br><span class="line">        Task&lt;GetPeopleOutput&gt; GetAllPeopleAsync();</span><br><span class="line">        Task AddNewPerson(AddNewPersonInput input);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在 <code>People</code> 文件夹中添加类：<code>PersonAppService</code>，文件内容如以下代码所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">using Abp.Domain.Repositories;</span><br><span class="line">using Acme.ContosoUniversity.People.Dto;</span><br><span class="line">using AutoMapper;</span><br><span class="line">using Castle.Core.Logging;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace Acme.ContosoUniversity.People</span><br><span class="line">&#123;</span><br><span class="line">    public class PersonAppService : ContosoUniversityAppServiceBase, IPersonAppService</span><br><span class="line">    &#123;</span><br><span class="line">        private readonly IRepository&lt;Person&gt; _personRepository;</span><br><span class="line">        public ILogger Logger &#123; get; set; &#125;</span><br><span class="line"></span><br><span class="line">        public PersonAppService(IRepository&lt;Person&gt; personRepository)</span><br><span class="line">        &#123;</span><br><span class="line">            _personRepository = personRepository;</span><br><span class="line">            Logger = NullLogger.Instance;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        public async Task AddNewPerson(AddNewPersonInput input)</span><br><span class="line">        &#123;</span><br><span class="line">            Logger.Debug(&quot;Adding a new person:&quot; + input.Name);</span><br><span class="line">            await _personRepository.InsertAsync(new Person &#123; Name = input.Name &#125;);</span><br><span class="line">            // throw new NotImplementedException();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public async Task&lt;GetPeopleOutput&gt; GetAllPeopleAsync()</span><br><span class="line">        &#123;</span><br><span class="line">            Logger.Debug(&quot;Getting all people&quot;);</span><br><span class="line">            return new GetPeopleOutput</span><br><span class="line">            &#123;</span><br><span class="line">                People = Mapper.Map&lt;List&lt;PersonDto&gt;&gt;(await _personRepository.GetAllListAsync())</span><br><span class="line">            &#125;;</span><br><span class="line">            // throw new NotImplementedException();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<pre class="line-numbers language-C#"><code class="language-C#">namespace Acme.ContosoUniversity.EntityFramework
+{    
+    [DbConfigurationType(typeof(MySqlEFConfiguration))]
+    public class ContosoUniversityDbContext : AbpDbContext
+    {
+        // 添加这一行代码
+        public virtual IDbSet<person> People { get; set; }
+
+        // 后续原有的代码省略
+     }
+ }
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></person></code></pre>
+<h2><span id="添加-application-服务类">添加 Application 服务类</span></h2><p>在 <code>Acme.ContosoUniversity.Application</code> 项目中添加 <code>People</code> 文件夹，在该文件夹中添加类： <code>IPersonAppService.cs</code>， 文件内容如以下所示：</p>
+<pre class="line-numbers language-C#"><code class="language-C#">using Abp.Application.Services;
+using Acme.ContosoUniversity.People.Dto;
+using System.Threading.Tasks;
+
+namespace Acme.ContosoUniversity.People
+{
+    public interface IPersonAppService: IApplicationService
+    {
+        Task<getpeopleoutput> GetAllPeopleAsync();
+        Task AddNewPerson(AddNewPersonInput input);
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></getpeopleoutput></code></pre>
+<p>在 <code>People</code> 文件夹中添加类：<code>PersonAppService</code>，文件内容如以下代码所示：</p>
+<pre class="line-numbers language-C#"><code class="language-C#">using Abp.Domain.Repositories;
+using Acme.ContosoUniversity.People.Dto;
+using AutoMapper;
+using Castle.Core.Logging;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace Acme.ContosoUniversity.People
+{
+    public class PersonAppService : ContosoUniversityAppServiceBase, IPersonAppService
+    {
+        private readonly IRepository<person> _personRepository;
+        public ILogger Logger { get; set; }
+
+        public PersonAppService(IRepository<person> personRepository)
+        {
+            _personRepository = personRepository;
+            Logger = NullLogger.Instance;
+        }
+
+
+        public async Task AddNewPerson(AddNewPersonInput input)
+        {
+            Logger.Debug("Adding a new person:" + input.Name);
+            await _personRepository.InsertAsync(new Person { Name = input.Name });
+            // throw new NotImplementedException();
+        }
+
+        public async Task<getpeopleoutput> GetAllPeopleAsync()
+        {
+            Logger.Debug("Getting all people");
+            return new GetPeopleOutput
+            {
+                People = Mapper.Map<list<persondto>>(await _personRepository.GetAllListAsync())
+            };
+            // throw new NotImplementedException();
+        }
+    }
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></list<persondto></getpeopleoutput></person></person></code></pre>
 <p>在 <code>People</code> 文件夹中添加子文件夹 <code>Dto</code>，在该文件夹中添加三个类：<code>PersonDto</code>， <code>GetPeopleOutput</code>， <code>AddNewPersonInput</code>， 文件内容分别如以下所示：</p>
-<p>PersonDto.cs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">using Abp.Application.Services.Dto;</span><br><span class="line"></span><br><span class="line">namespace Acme.ContosoUniversity.People.Dto</span><br><span class="line">&#123;</span><br><span class="line">    public class PersonDto : EntityDto</span><br><span class="line">    &#123;</span><br><span class="line">        public string Name &#123; get; set; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>GetPeopleOutput.cs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">using System.Collections.Generic;</span><br><span class="line"></span><br><span class="line">namespace Acme.ContosoUniversity.People.Dto</span><br><span class="line">&#123;</span><br><span class="line">    public class GetPeopleOutput</span><br><span class="line">    &#123;</span><br><span class="line">        public List&lt;PersonDto&gt; People &#123; get; set; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>AddNewPersonInput.cs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">using System.ComponentModel.DataAnnotations;</span><br><span class="line"></span><br><span class="line">namespace Acme.ContosoUniversity.People.Dto</span><br><span class="line">&#123;</span><br><span class="line">    public class AddNewPersonInput</span><br><span class="line">    &#123;</span><br><span class="line">        [Required]</span><br><span class="line">        public string Name &#123; get; set; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2><span id="创建-dto-映射关系">创建 DTO 映射关系</span></h2><p>修改 <code>Acme.ContosoUniversity.Application</code> 项目中的 <code>ContosoUniversityApplicationModule.cs</code>文件，内容如以下代码所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">using System.Reflection;</span><br><span class="line">using Abp.Modules;</span><br><span class="line">using Acme.ContosoUniversity.People;</span><br><span class="line">using Acme.ContosoUniversity.People.Dto;</span><br><span class="line">using AutoMapper;</span><br><span class="line"></span><br><span class="line">namespace Acme.ContosoUniversity</span><br><span class="line">&#123;</span><br><span class="line">    [DependsOn(typeof(ContosoUniversityCoreModule))]</span><br><span class="line">    public class ContosoUniversityApplicationModule : AbpModule</span><br><span class="line">    &#123;</span><br><span class="line">        public override void Initialize()</span><br><span class="line">        &#123;</span><br><span class="line">            IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());</span><br><span class="line">            // 低版本的AutoMapper用这一行</span><br><span class="line">            // Mapper.CreateMap&lt;Person, PersonDto&gt;();  </span><br><span class="line">            </span><br><span class="line">            // 高版本的AutoMapper 改成这样的写法</span><br><span class="line">            Mapper.Initialize(x =&gt; x.CreateMap&lt;Person, PersonDto&gt;()); </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2><span id="迁移和更新数据库">迁移和更新数据库</span></h2><p>在 <code>Visual Studio 2019</code> 中菜单中选择：<code>工具</code> -&gt; <code>NuGet包管理器</code> -&gt; <code>程序包管理器控制台</code>，在打开的控制台中输入以下两个命令执行数据库迁移和更新：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add-migration init</span><br><span class="line">update-database</span><br></pre></td></tr></table></figure></p>
+<p>PersonDto.cs</p>
+<pre class="line-numbers language-C#"><code class="language-C#">using Abp.Application.Services.Dto;
+
+namespace Acme.ContosoUniversity.People.Dto
+{
+    public class PersonDto : EntityDto
+    {
+        public string Name { get; set; }
+    }
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>GetPeopleOutput.cs</p>
+<pre class="line-numbers language-C#"><code class="language-C#">using System.Collections.Generic;
+
+namespace Acme.ContosoUniversity.People.Dto
+{
+    public class GetPeopleOutput
+    {
+        public List<persondto> People { get; set; }
+    }
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></persondto></code></pre>
+<p>AddNewPersonInput.cs</p>
+<pre class="line-numbers language-C#"><code class="language-C#">using System.ComponentModel.DataAnnotations;
+
+namespace Acme.ContosoUniversity.People.Dto
+{
+    public class AddNewPersonInput
+    {
+        [Required]
+        public string Name { get; set; }
+    }
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2><span id="创建-dto-映射关系">创建 DTO 映射关系</span></h2><p>修改 <code>Acme.ContosoUniversity.Application</code> 项目中的 <code>ContosoUniversityApplicationModule.cs</code>文件，内容如以下代码所示：</p>
+<pre class="line-numbers language-C#"><code class="language-C#">using System.Reflection;
+using Abp.Modules;
+using Acme.ContosoUniversity.People;
+using Acme.ContosoUniversity.People.Dto;
+using AutoMapper;
+
+namespace Acme.ContosoUniversity
+{
+    [DependsOn(typeof(ContosoUniversityCoreModule))]
+    public class ContosoUniversityApplicationModule : AbpModule
+    {
+        public override void Initialize()
+        {
+            IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
+            // 低版本的AutoMapper用这一行
+            // Mapper.CreateMap<person, persondto>();  
+
+            // 高版本的AutoMapper 改成这样的写法
+            Mapper.Initialize(x => x.CreateMap<person, persondto>()); 
+        }
+    }
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></person,></person,></code></pre>
+<h2><span id="迁移和更新数据库">迁移和更新数据库</span></h2><p>在 <code>Visual Studio 2019</code> 中菜单中选择：<code>工具</code> -&gt; <code>NuGet包管理器</code> -&gt; <code>程序包管理器控制台</code>，在打开的控制台中输入以下两个命令执行数据库迁移和更新：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">add-migration init
+update-database
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2><span id="在-wpf-中操作数据">在 WPF 中操作数据</span></h2><p>打开 <code>Acme.ContosoUniversity.WPF</code> 项目中的 <code>MainWindow.xaml</code> 文件，分别添加 <code>ListBox控件</code>(命名：lstPeople)、 <code>TextBox控件</code>(命名：txtName) 和 <code>Button控件</code>(命名：btnAdd)，<code>Button控件</code> 添加单击事件。<br></p>
 <p>MainWindow.xaml.cs 文件的代码如以下所示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">using Abp.Dependency;</span><br><span class="line">using Acme.ContosoUniversity.People;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line">using System.Windows;</span><br><span class="line"></span><br><span class="line">namespace Acme.ContosoUniversity.WPF</span><br><span class="line">&#123;</span><br><span class="line">    /// &lt;summary&gt;</span><br><span class="line">    /// MainWindow.xaml 的交互逻辑</span><br><span class="line">    /// &lt;/summary&gt;</span><br><span class="line">    public partial class MainWindow : Window, ISingletonDependency</span><br><span class="line">    &#123;</span><br><span class="line">        private readonly IPersonAppService _personAppService;</span><br><span class="line">        public MainWindow(IPersonAppService personAppService)</span><br><span class="line">        &#123;</span><br><span class="line">            _personAppService = personAppService;</span><br><span class="line">            InitializeComponent();            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 添加按钮单击事件</span><br><span class="line">        private async void BtnAdd_Click(object sender, RoutedEventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            try</span><br><span class="line">            &#123;</span><br><span class="line">               await _personAppService.AddNewPerson(new People.Dto.AddNewPersonInput</span><br><span class="line">                &#123;</span><br><span class="line">                    Name = txtName.Text</span><br><span class="line">                &#125;) ;</span><br><span class="line">                await LoadAllPeopleAsync();</span><br><span class="line">            &#125;</span><br><span class="line">            catch (System.Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                MessageBox.Show(ex.ToString());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 载入所有数据到 ListBox 控件</span><br><span class="line">        private async Task LoadAllPeopleAsync()</span><br><span class="line">        &#123;</span><br><span class="line">            lstPeople.Items.Clear();</span><br><span class="line">            var result = await _personAppService.GetAllPeopleAsync();</span><br><span class="line">            foreach (var person in result.People)</span><br><span class="line">            &#123;</span><br><span class="line">                lstPeople.Items.Add(person.Name);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-C#"><code class="language-C#">using Abp.Dependency;
+using Acme.ContosoUniversity.People;
+using System.Threading.Tasks;
+using System.Windows;
+
+namespace Acme.ContosoUniversity.WPF
+{
+    /// <summary>
+    /// MainWindow.xaml 的交互逻辑
+    /// </summary>
+    public partial class MainWindow : Window, ISingletonDependency
+    {
+        private readonly IPersonAppService _personAppService;
+        public MainWindow(IPersonAppService personAppService)
+        {
+            _personAppService = personAppService;
+            InitializeComponent();            
+        }
+
+        // 添加按钮单击事件
+        private async void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+               await _personAppService.AddNewPerson(new People.Dto.AddNewPersonInput
+                {
+                    Name = txtName.Text
+                }) ;
+                await LoadAllPeopleAsync();
+            }
+            catch (System.Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        // 载入所有数据到 ListBox 控件
+        private async Task LoadAllPeopleAsync()
+        {
+            lstPeople.Items.Clear();
+            var result = await _personAppService.GetAllPeopleAsync();
+            foreach (var person in result.People)
+            {
+                lstPeople.Items.Add(person.Name);
+            }
+        }
+    }
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
       
     </div>
     <div class="article-footer">
