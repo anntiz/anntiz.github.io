@@ -384,7 +384,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/06/03/git-with-github/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 344(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 342(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -396,14 +396,9 @@
       
         <h2><span id="安装git">安装Git</span></h2><p>什么是<code>Git</code> ?简单来说 <code>Git</code> 是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用Git同步到GitHub上。如果想要了解Git的细节，参看廖雪峰老师的Git教程：Git教程 从Git官网下载：Git - Downloading Package 现在的机子基本都是64位的，选择64位的安装包，下载后安装，在命令行里输入git测试是否安装成功，若安装失败，参看其他详细的Git安装教程。安装成功后，将你的Git与GitHub帐号绑定，鼠标右击打开Git Bash</p>
 <img src="/2019/06/03/git-with-github/git_bash_here.jpg" title="Git Bash Here">
-<p>或者在菜单里搜索 <code>Git Bash</code>，设置 <code>user.name</code> 和 <code>user.email</code> 配置信息：</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"你的GitHub用户名"</span>
-<span class="token function">git</span> config --global user.email <span class="token string">"你的GitHub注册邮箱"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h2><span id="生成ssh密钥文件">生成ssh密钥文件：</span></h2><pre><code>ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;
-</code></pre><p>然后直接三个回车即可，默认不需要设置密码<br>将生成的 <code>ssh key</code> 复制到剪贴板，执行命令：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">clip <span class="token operator">&lt;</span> ~/.ssh/id_rsa.pub
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>或者在菜单里搜索 <code>Git Bash</code>，设置 <code>user.name</code> 和 <code>user.email</code> 配置信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"你的GitHub用户名"</span></span><br><span class="line">git config --global user.email <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure></p>
+<h2><span id="生成ssh密钥文件">生成ssh密钥文件：</span></h2><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure>
+<p>然后直接三个回车即可，默认不需要设置密码<br>将生成的 <code>ssh key</code> 复制到剪贴板，执行命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></p>
 <p>（或者找到生成的.ssh的文件夹中的 <code>id_rsa.pub</code> 密钥，将内容全部复制)<br><img src="/2019/06/03/git-with-github/id_rsa_pub.jpg" title="id_ras.pub"></p>
 <h2><span id="添加-github-new-ssh-key">添加 Github new SSH Key</span></h2><p>打开 <code>GitHub_Settings_keys</code> 页面，新建 <code>new SSH Key</code><br><img src="/2019/06/03/git-with-github/newkey.jpg" title="new key"></p>
 <p>Title 为标题，任意填即可，将刚刚复制的 <code>id_rsa.pub</code> 内容粘贴进去，最后点击 <code>Add SSH key</code>。</p>
