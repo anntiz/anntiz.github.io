@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7aef1735-1065-4b95-b5f5-d238353a7686" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/themes/pure/layout/_partial/post/livere.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/abp-wpf-data-sample.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/abp-wpf-data-sample.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/abp-wpf-with-data.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/abp-wpf-with-data.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/use-mariadb-10-4-6-with-ubuntu-18-04.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/use-mariadb-10-4-6-with-ubuntu-18-04.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/pure/layout/_partial/article.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/pure/layout/_partial/article.ejs" afterDir="false" />
@@ -29,8 +25,8 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/use-mariadb-10-4-6-with-ubuntu-18-04.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="488">
-                <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+              <first_editor relative-caret-position="350">
+                <caret line="137" column="3" lean-forward="true" selection-start-line="137" selection-start-column="3" selection-end-line="137" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -173,12 +169,12 @@
       <workItem from="1559926097399" duration="46000" />
       <workItem from="1559980876324" duration="1198000" />
       <workItem from="1560694495254" duration="244000" />
-      <workItem from="1560949863072" duration="2378000" />
+      <workItem from="1560949863072" duration="2545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51140000" />
+    <option name="totallyTimeSpent" value="51307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -402,8 +398,8 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/use-mariadb-10-4-6-with-ubuntu-18-04.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="488">
-            <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+          <first_editor relative-caret-position="350">
+            <caret line="137" column="3" lean-forward="true" selection-start-line="137" selection-start-column="3" selection-end-line="137" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>

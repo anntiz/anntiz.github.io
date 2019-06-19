@@ -128,7 +128,8 @@ mysql -u root -p
 
 ```bash
 MariaDB [(none)]> use mysql;
-``` 
+
+```
 
 配置所有电脑可以通过 root:123456 访问数据库：
 
