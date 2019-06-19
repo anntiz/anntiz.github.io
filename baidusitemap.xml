@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://anntiz.github.io/2019/06/05/abp-wpf-data-sample/</loc>
-    <lastmod>2019-06-06</lastmod>
+    <loc>https://anntiz.github.io/2019/06/19/use-mariadb-10-4-6-with-ubuntu-18-04/</loc>
+    <lastmod>2019-06-19</lastmod>
   </url>  <url>
     <loc>https://anntiz.github.io/2019/06/05/abp-wpf-with-data/</loc>
-    <lastmod>2019-06-05</lastmod>
+    <lastmod>2019-06-07</lastmod>
+  </url>  <url>
+    <loc>https://anntiz.github.io/2019/06/05/abp-wpf-data-sample/</loc>
+    <lastmod>2019-06-06</lastmod>
   </url>  <url>
     <loc>https://anntiz.github.io/2019/06/01/use-abp-with-wpf/</loc>
     <lastmod>2019-06-05</lastmod>
