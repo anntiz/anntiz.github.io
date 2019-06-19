@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Anntiz&#39;s Blog">
 <meta property="og:description" content="在 Ubuntu 18.04 上安装MariaDB 10.4 的具体步骤要在 Ubuntu 18.04 上安装最新版的 MariaDB，需要将 MariaDB 存储库添加到系统中。 第一步、安装 software-properties-common，如果缺少则进行安装：1sudo apt-get install software-properties-common 第二步、导入 MariaDB g">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-19T13:50:42.669Z">
+<meta property="og:updated_time" content="2019-06-19T13:53:29.622Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Ubuntu 18.04系统上安装MariaDB 10.4的步骤">
 <meta name="twitter:description" content="在 Ubuntu 18.04 上安装MariaDB 10.4 的具体步骤要在 Ubuntu 18.04 上安装最新版的 MariaDB，需要将 MariaDB 存储库添加到系统中。 第一步、安装 software-properties-common，如果缺少则进行安装：1sudo apt-get install software-properties-common 第二步、导入 MariaDB g">
@@ -400,7 +400,9 @@
 <h2><span id="设置-mariadb-的远程连接">设置 MariaDB 的远程连接</span></h2><p>MariaDB 初始化成功之后，登录到MariaDB数据库：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
 <p>设置当前数据库：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(none)]&gt; use mysql;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">配置所有电脑可以通过 root:123456 访问数据库：</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">MariaDB [(mysql)]&gt; GRANT ALL PRIVILEGES ON *.* to <span class="string">'root'</span>@<span class="string">'%'</span> identified by <span class="string">'123456'</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(none)]&gt; use mysql;</span><br></pre></td></tr></table></figure>
+<p>配置所有电脑可以通过 root:123456 访问数据库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(mysql)]&gt; GRANT ALL PRIVILEGES ON *.* to <span class="string">'root'</span>@<span class="string">'%'</span> identified by <span class="string">'123456'</span>;</span><br></pre></td></tr></table></figure>
 <p>从mysql数据库中的授权表重新载入权限</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(mysql)]&gt; flush privileges;</span><br></pre></td></tr></table></figure>
 <p>编辑 MariaDB 10.4 的配置文件：/etc/mysql/my.cnf， MySQL的为 /etc/mysql/mysql.conf.d/mysqld.cnf，<br>找到 “bind-address = 127.0.0.1” , 这一行要注释掉。</p>
