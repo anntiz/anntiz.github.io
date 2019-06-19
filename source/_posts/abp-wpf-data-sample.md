@@ -29,7 +29,7 @@ namespace Acme.ContosoUniversity.People
 
 打开 `Acme.ContosoUniversity.EntityFramework` 项目下的 `EntityFramework/ContosoUniversityDbContext.cs` 文件，在数据库上下文中添加 `IDbSet<Person>` 属性，如以下代码所示：
 
-```C#
+```cs
 namespace Acme.ContosoUniversity.EntityFramework
 {    
     [DbConfigurationType(typeof(MySqlEFConfiguration))]

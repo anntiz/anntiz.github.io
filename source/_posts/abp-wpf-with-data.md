@@ -18,7 +18,7 @@ date: 2019-06-05 19:47:28
 
 {% asset_img untitled02.png add NuGet package %}
 
-## 修改移动文件
+## 修改迁移配置文件
 
 打开 `Acme.ContosoUniversity.EntityFramework` 项目下 `Migrations/Configuration.cs` 文件，修改 `Configuration` 方法为如下代码：
 ```c#
