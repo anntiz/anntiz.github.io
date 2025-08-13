@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Linux Mint 安装后的设置</title>
+      <link href="/2025/08/13/linux-mint-settings/"/>
+      <url>/2025/08/13/linux-mint-settings/</url>
+      
+        <content type="html"><![CDATA[<h1 id="设置默认的Python"><a href="#设置默认的Python" class="headerlink" title="设置默认的Python"></a>设置默认的Python</h1><p><code>Linux Mint</code> 自带有 <code>python 3</code>, 可以将其设置为默认的 <code>Python</code> 解释器, 步骤如下：</p><ol><li>使用 <code>whereis</code> 命令查看 <code>Python</code> 安装的位置</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whereis python3</span><br></pre></td></tr></table></figure><p>命令执行结果如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">laohoo@laohoo-Inspiron-7559:~$ whereis python3</span><br><span class="line">python3: /usr/bin/python3 /usr/lib/python3 /etc/python3 /usr/share/python3 /usr/share/man/man1/python3.1.gz</span><br></pre></td></tr></table></figure><ol start="2"><li>使用<code>update-alternatives</code> 设置默认 <code>Python</code> 版本</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> update-alternatives --install /usr/bin/python python /usr/bin/python3 1</span><br></pre></td></tr></table></figure><h1 id="安装-Visual-Studio-Code"><a href="#安装-Visual-Studio-Code" class="headerlink" title="安装 Visual Studio Code"></a>安装 <code>Visual Studio Code</code></h1><p>从 <code>apt</code> 存储库要手动安装</p><ol><li>运行以下脚本来安装签名密钥:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install wget gpg</span><br><span class="line">wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; microsoft.gpg</span><br><span class="line"><span class="built_in">sudo</span> install -D -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft.gpg</span><br><span class="line"><span class="built_in">rm</span> -f microsoft.gpg</span><br></pre></td></tr></table></figure><ol start="2"><li>创建一个<code>/etc/apt/sources.list.d/vscode.sources</code>文件, 并添加以下内容,以添加对上游包存储库的引用:</li></ol><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Types: deb</span><br><span class="line">URIs: https://packages.microsoft.com/repos/code</span><br><span class="line">Suites: stable</span><br><span class="line">Components: main</span><br><span class="line">Architectures: amd64,arm64,armhf</span><br><span class="line">Signed-By: /usr/share/keyrings/microsoft.gpg</span><br></pre></td></tr></table></figure><ol start="3"><li>最后, 更新软件包缓存并安装软件包:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install apt-transport-https</span><br><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install code <span class="comment"># or code-insiders</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux mint </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mint </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用国内镜像安装Rust</title>
       <link href="/2025/07/30/install-rust-using-mirror/"/>
       <url>/2025/07/30/install-rust-using-mirror/</url>
